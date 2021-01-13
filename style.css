@@ -1,0 +1,111 @@
+* {
+	box-sizing: border-box;
+}
+html {
+	box-sizing: border-box;
+}
+body {
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	background-color: whitesmoke;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.calculator {
+	background: white;
+	width: 320px;
+	border-radius: 5px;
+	box-shadow: 0 5px 30px -5px rgba(0, 0, 0, 0.5);
+}
+.display-result {
+	background-color: black;
+	color: white;
+	margin: 0;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	border-radius: 5px 5px 0 0;
+}
+
+.display-result h2 {
+	margin: 0;
+	padding: 25px;
+	font-size: 3rem;
+	font-family: 'Roboto Mono', monospace;
+	overflow-x: auto;
+}
+
+.btns {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 10px;
+	padding: 10px;
+}
+button:active {
+	transform: translateY(1px);
+}
+button:focus {
+	outline: none;
+}
+
+.btns button {
+	min-height: 50px;
+	font-size: 20px;
+	font-weight: 100;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	background: #ddd;
+}
+
+.btns button:hover {
+	filter: brightness(110%);
+}
+.btns .operator {
+	background-color: #bbb;
+	color: white;
+	font-size: 30px;
+}
+
+.btns .clear {
+	background: rgb(190, 2, 2);
+	color: white;
+}
+.btns .clear:hover {
+	filter: brightness(90%);
+}
+.btns .equal-sign {
+	grid-column: -2;
+	grid-row: 2 / span 4;
+	background: green;
+	color: white;
+}
+/* scrollbar */
+/* width */
+::-webkit-scrollbar {
+	width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: #ddd;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: #555;
+}
+
+@media screen and (max-width: 600px) {
+	.calculator {
+		width: 95%;
+	}
+}
